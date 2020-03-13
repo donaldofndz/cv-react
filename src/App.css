@@ -1,6 +1,8 @@
-body {
+* {
   font-family: 'Roboto';
 }
+
+/*-- HEADER --*/
 
 .header {
   margin-top: 15px;
@@ -22,17 +24,6 @@ body {
   border-top: 1px solid #9e9e9e;
 }
 
-.--left-space{
-  padding-left: 10px;
-}
-
-.--no-capital {
-  text-transform: none;
-}
-.--bold{
-  font-weight: bold;
-}
-
 .header__title-aditional-info--extra {
   margin-left: 5px;
   font-weight: bold;
@@ -43,5 +34,66 @@ body {
   margin: 15px 0px;
 }
 
+/*--Studies--*/
 
+.informationTemp {
+  margin: 5% 0%;
+}
 
+.informationTemp__header {
+  font-weight: bold;
+  font-size: 1.7em;
+}
+
+.informationTemp__colorline {
+  border-image: linear-gradient(#424242, #9e9e9e) 1;
+}
+
+.studies {
+  margin-bottom: 6%;
+}
+
+.studies__topic{
+  font-weight: bold;
+}
+
+.work{
+  margin-bottom: 6%;
+}
+
+.work__topic{
+  font-weight: bold;
+}
+
+.work__inside{
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.work__inside__colorline {
+  border-image: linear-gradient(#9e9e9e, #eeeeee) 1;
+}
+
+.work__chips {
+  margin-right: 1%;
+  margin-bottom: 1%;
+}
+
+.extraInfo__title {
+  font-weight: bold;
+}
+
+.extraInfo__inside {
+  margin-bottom: 6%;
+}
+
+.--left-space{
+  padding-left: 10px;
+}
+
+.--no-capital {
+  text-transform: none;
+}
+.--bold{
+  font-weight: bold;
+}
