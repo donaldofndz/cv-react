@@ -87,6 +87,11 @@
   margin-bottom: 6%;
 }
 
+.navBar{
+  background-color: white;
+  color: black;
+}
+
 .--left-space{
   padding-left: 10px;
 }

@@ -3,9 +3,8 @@ import { Grid } from "@material-ui/core";
 import InformationTemp from "./informationTemp"
 import apiMock from "../ApiMock/apiMock";
 import Studies from "./studies"
-import WorkExperience from "./workExperience"
 
-class Information extends Component {
+class ImpStudies extends Component {
 
   constructor(props) {
     super(props)
@@ -14,10 +13,6 @@ class Information extends Component {
         section: "",
         data: []
       },
-      workData: {
-        section: "",
-        data: []
-      }
     }
   }
 
@@ -25,7 +20,6 @@ class Information extends Component {
     const instanceApiMock = new apiMock();
     this.setState({
       studiesData: instanceApiMock.getStudiesData(),
-      workData: instanceApiMock.getWorkExperience()
     });
   }
 
@@ -34,10 +28,9 @@ class Information extends Component {
     return (
       <Grid>
         <InformationTemp section={studiesData.section} inComponent={<Studies data={studiesData.data}></Studies>} />
-        <InformationTemp section={workData.section} inComponent={<WorkExperience data={workData.data} />}/>
       </Grid>
     )
   }
 }
 
-export default Information; 
+export default ImpStudies; 
