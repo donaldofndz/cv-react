@@ -23,7 +23,7 @@ class ImpWorkExperience extends Component {
   }
 
   render() {
-    const { studiesData, workData } = this.state;
+    const { workData } = this.state;
     return (
       <Grid>
         <InformationTemp

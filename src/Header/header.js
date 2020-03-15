@@ -1,31 +1,15 @@
 import React, { Component } from "react";
-import { Grid, makeStyles, isWidthUp, withWidth } from "@material-ui/core";
+import { Grid, isWidthUp, withWidth } from "@material-ui/core";
 import apiMock from "../ApiMock/apiMock";
-
-const useStyles = makeStyles(theme => ({
-  gridTile: {
-    color: "red"
-  }
-}));
 
 function SchoolSection(props) {
   return (
-    <Grid xs={12}>
+    <Grid item xs={12}>
       <p className="header__title-aditional-info">
         {props.grade}
         <span className="header__title-aditional-info--extra">
           ({props.nameOfSchool})
         </span>
-      </p>
-    </Grid>
-  );
-}
-
-function ExtraInfo(props) {
-  return (
-    <Grid item xs={12} sm={6}>
-      <p>
-        {props.leftVal} :<span>{props.rigthVal}</span>
       </p>
     </Grid>
   );
@@ -49,9 +33,6 @@ class Header extends Component {
   }
 
   render() {
-    const titleStyle = {
-      borde: "1px solid red"
-    };
     const { infoData } = this.state;
     const listOfSchools = infoData.studies.map((studies, index) => (
       <SchoolSection
@@ -76,12 +57,11 @@ class Header extends Component {
       <Grid>
         <Grid
           container
-          row
           className={
             isWidthUp("md", this.props.width) ? "header big" : "header"
           }
         >
-          <Grid item sm={12} md={6}>
+          <Grid container sm={12} md={6}>
             <h1>{infoData.name}</h1>
           </Grid>
           <Grid

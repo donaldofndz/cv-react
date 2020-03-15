@@ -1,26 +1,40 @@
-import React from "react";
-import logo from "./logo.svg";
+import React, { Component } from "react";
 import "./App.css";
-import { Container, AppBar, Tabs, Tab } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 import Header from "./Header/header";
 import ImpStudies from "./Information/impStudies";
 import ImpWorkExperience from "./Information/impWorkExperience";
 import ImpResearchCourses from "./Information/impResearchCourses";
 import ImpSkills from "./Information/impSkills";
 import NavBar from "./Navbar/navbar";
+import Footer from "./Footer/footer";
+import { Box, isWidthUp, withWidth } from "@material-ui/core";
 
-function App() {
-  return (
-    <Container maxWidth="lg">
-      <Header />
-      <NavBar
-        studies={<ImpStudies />}
-        workExperience={<ImpWorkExperience />}
-        researchCourses={<ImpResearchCourses />}
-        skills={<ImpSkills />}
-      />
-    </Container>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Container maxWidth="lg">
+        <Header />
+        {isWidthUp("md", this.props.width) ? (
+          <NavBar
+            studies={<ImpStudies />}
+            workExperience={<ImpWorkExperience />}
+            researchCourses={<ImpResearchCourses />}
+            skills={<ImpSkills />}
+          />
+        ) : (
+          <Box>
+            <ImpStudies />
+            <ImpWorkExperience />
+            <ImpResearchCourses />
+            <ImpSkills />
+          </Box>
+        )}
+
+        <Footer />
+      </Container>
+    );
+  }
 }
 
-export default App;
+export default withWidth()(App);

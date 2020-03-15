@@ -14,7 +14,7 @@ class Studies extends Component {
             <p> <span className="studies__topic"> University:</span> {school.univesityName}</p>
             <p> <span className="studies__topic"> Grade:</span> {school.grade}</p>
             <p> <span className="studies__topic"> Graduation Date:</span> {school.graduationDate}</p>
-            {school.ID != "" ? <p> <span className="studies__topic"> ID:</span> {school.ID}</p> : ''}
+            {school.ID !== "" ? <p> <span className="studies__topic"> ID:</span> {school.ID}</p> : ''}
           </div>
         ))
       )

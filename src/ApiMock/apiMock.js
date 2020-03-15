@@ -152,39 +152,6 @@ class apiMock {
     }
   }
 
-  getTechSkills() {
-    return {
-      section: "Technology Skills",
-      data: [
-        {
-          title: "Programming Lenguages",
-          data: "",
-          techonologies: ["C", "HTML5", "CSS3", "JavaScript", "NodeJS", "Python", "PHP", "Java", "SQL", "Scala"]
-        },
-        {
-          title: "Databases",
-          data: "",
-          techonologies: ["Oracle", "MysQL", "MongoDB"]
-        },
-        {
-          title: "Frameworks",
-          data: "",
-          techonologies: ["React", "Angular", "AngularJS", "Bootstrap", "Materialize", "JQuery", "CodeIgniter", "Material UI", "Skeleton", "AKKA", "Spring"]
-        },
-        {
-          title: "Version Control",
-          data: "",
-          techonologies: ["Git", "GitLab"]
-        },
-        {
-          title: "Methodologies",
-          data: "",
-          techonologies: ["SCRUM", "KANBAN"]
-        }
-      ]
-    }
-  }
-
   getLenguage() {
     return {
       section: "Lenguages",
@@ -195,6 +162,26 @@ class apiMock {
           techonologies: []
         }
       ]
+    }
+  }
+
+  getFooterLinks(){
+    return{
+      links: {
+        "GitHub" : "https://github.com/donaldofndz",
+        "LinkedIn" : "https://www.linkedin.com/in/donaldo-fernandez/",
+        "HackerRank" : "https://www.hackerrank.com/donaldo_fndz?hr_r=1",
+        "CodeSignal" : "https://app.codesignal.com/profile/jose_f20"
+      }
+    }
+  }
+
+  getFooterContacts(){
+    return{
+      links: {
+        "donaldo.fndz@gmail.com"  : "mailto:donaldo.fndz@gmail.com",
+        "+52 (55) 48-90-58-31" : "tel:+525548905831"
+      }
     }
   }
 

@@ -1,36 +1,38 @@
 import React, { Component } from "react";
 import { Grid } from "@material-ui/core";
-import InformationTemp from "./informationTemp"
+import InformationTemp from "./informationTemp";
 import apiMock from "../ApiMock/apiMock";
-import Studies from "./studies"
+import Studies from "./studies";
 
 class ImpStudies extends Component {
-
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       studiesData: {
         section: "",
         data: []
-      },
-    }
+      }
+    };
   }
 
   componentDidMount() {
     const instanceApiMock = new apiMock();
     this.setState({
-      studiesData: instanceApiMock.getStudiesData(),
+      studiesData: instanceApiMock.getStudiesData()
     });
   }
 
   render() {
-    const { studiesData, workData } = this.state
+    const { studiesData } = this.state;
     return (
       <Grid>
-        <InformationTemp section={studiesData.section} inComponent={<Studies data={studiesData.data}></Studies>} />
+        <InformationTemp
+          section={studiesData.section}
+          inComponent={<Studies data={studiesData.data}></Studies>}
+        />
       </Grid>
-    )
+    );
   }
 }
 
-export default ImpStudies; 
+export default ImpStudies;
