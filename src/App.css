@@ -2,6 +2,14 @@
   font-family: "Roboto";
 }
 
+::selection {
+  background: #ffee58;
+}
+
+p:hover{
+  color: #455a64;
+}
+
 /*-- HEADER --*/
 
 .header {
